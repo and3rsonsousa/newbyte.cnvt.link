@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.app {
+	@apply grid min-h-screen place-content-center p-4;
+}
+
+.container {
+	@apply mx-auto;
+}
+
+.backdrop {
+	@apply fixed inset-0 z-0;
+}
+
+.content {
+	@apply relative z-10 w-full space-y-8;
+}
+
+.header {
+	@apply space-y-4;
+}
+.header h1 {
+	@apply mb-8 mt-4 text-center text-4xl font-bold;
+}
+
+.header h3 {
+	@apply my-4 text-center text-xl font-medium;
+}
+
+.button {
+	@apply bg-brand-3 hover:bg-brand-4 active:bg-brand-2 my-2 flex w-full items-center justify-center rounded-md py-4 px-8 font-medium ring-1 ring-black/5 transition duration-300 active:scale-95 active:duration-75;
+}
+
+.button-primary {
+	@apply bg-brand-2 hover:bg-brand-4 active:bg-brand-1 my-4 py-4  text-xl text-white active:duration-75;
+}
+
+.footer {
+	@apply flex justify-center gap-4;
+}
+
+.icon-link {
+	@apply bg-brand-4 text-brand-2 hover:bg-brand-3 active:bg-brand-2 grid h-12 w-12 place-content-center rounded-full ring-1 ring-black/5;
+}
