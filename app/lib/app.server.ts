@@ -87,6 +87,14 @@ export function getAppData() {
 				url: "/whatsapp",
 				primary: true,
 			},
+
+			{
+				name: "Encarte BLACK BYTE",
+				url: "/encarte-black-byte.pdf",
+				primary: true,
+				type: "download",
+			},
+
 			{
 				name: "Entre no GRUPO DE OFERTAS",
 				url: "/grupo-whatsapp",
