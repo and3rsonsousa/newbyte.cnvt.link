@@ -1,5 +1,5 @@
 import { LoaderFunction, MetaFunction, useLoaderData } from "remix";
-import { AppDataType, getAppData } from "~/lib/app.server";
+import { getAppData } from "~/lib/app.server";
 
 import {
 	App,
@@ -9,19 +9,33 @@ import {
 	Header,
 	ButtonLinks,
 } from "~/components";
+import { AppDataType, ItemType } from "~/types";
 
 export const meta: MetaFunction = ({ data }: { data: AppDataType }) => {
 	return { title: data.app.name || "cnvt.link" };
 };
 
 export const loader: LoaderFunction = async () => {
-	let data = getAppData();
-	return data;
+	let { app, container, backdrop, header, links } = getAppData();
+
+	return { app, container, backdrop, header, links };
 };
 
 export default function Index() {
-	let { app, container, header, backdrop, links, footer } =
+	let { app, container, backdrop, header, links } =
 		useLoaderData<AppDataType>();
+
+	let mainLinks: Array<ItemType> = [];
+	let footerLinks: Array<ItemType> = [];
+
+	links.map((link) => {
+		if (link.footer) {
+			footerLinks.push(link);
+		} else {
+			mainLinks.push(link);
+		}
+		return link;
+	});
 
 	return (
 		<App className={app.className}>
@@ -30,8 +44,8 @@ export default function Index() {
 					<Backdrop {...backdrop} />
 					<div className="content">
 						<Header {...header}></Header>
-						<ButtonLinks links={links} />
-						<Footer {...footer} />
+						<ButtonLinks links={mainLinks} />
+						<Footer footerLinks={footerLinks} />
 					</div>
 				</>
 			</Container>

@@ -1,13 +1,27 @@
-import { ReactChild } from "react";
 import { Link } from "remix";
-import { ButtonLinkType } from "~/lib/app.server";
+import { ItemType } from "~/types";
 
-export default function ButtonLinks({ links }: { links: ButtonLinkType[] }) {
+export default function ButtonLinks({ links }: { links: ItemType[] }) {
 	return (
-		<div className="links">
-			{links.map((link, index) => (
-				<ButtonLink {...link} key={index} />
-			))}
+		<div className={`links`}>
+			{links.map((link, index) => {
+				if (link.group) {
+					return (
+						<div
+							className={`grid grid-cols-2 ${
+								!link.spaceless ? "gap-2" : "group"
+							}`}
+							key={index}
+						>
+							{link.group.map((link, index) => (
+								<ButtonLink {...link} key={index} />
+							))}
+						</div>
+					);
+				} else {
+					return <ButtonLink {...link} key={index} />;
+				}
+			})}
 		</div>
 	);
 }
@@ -16,42 +30,78 @@ export function ButtonLink({
 	name,
 	url,
 	className = "",
-	type = "link",
-	primary = false,
-}: ButtonLinkType) {
-	if (type === "external") {
-		return (
-			<a
-				href={url}
-				className={`button ${
-					primary ? "button-primary" : ""
-				} ${className}`}
-				target="_blank"
-			>
-				{name}
-			</a>
-		);
-	} else if (type === "download") {
-		return (
+	download,
+	type,
+}: ItemType): JSX.Element {
+	// Se for download
+
+	if (url !== undefined) {
+		return download ? (
 			<a
 				href={url}
 				download
 				className={`button ${
-					primary ? "button-primary" : ""
+					type
+						? type === "primary"
+							? "button-primary"
+							: "button-alternative"
+						: ""
 				} ${className}`}
 				target="_blank"
+				rel="noreferrer"
 			>
-				{name}
+				<Name name={name} />
 			</a>
+		) : // Se não, testa se tem https:// para link externo
+		/^https:\/\//.test(url) ? (
+			<a
+				href={url}
+				className={`button ${
+					type
+						? type === "primary"
+							? "button-primary"
+							: "button-alternative"
+						: ""
+				} ${className}`}
+				target="_blank"
+				rel="noreferrer"
+			>
+				<Name name={name} />
+			</a>
+		) : (
+			// por fim exibe Link do remix
+			<Link
+				to={url}
+				className={`button ${
+					type
+						? type === "primary"
+							? "button-primary"
+							: "button-alternative"
+						: ""
+				} ${className}`}
+			>
+				<Name name={name} />
+			</Link>
+		);
+	} else {
+		return (
+			<div className={`py-5`}>
+				<Name name={name} />
+			</div>
 		);
 	}
+}
 
-	return (
-		<Link
-			to={url}
-			className={`button ${primary ? "button-primary" : ""} ${className}`}
-		>
-			{name}
-		</Link>
-	);
+export function Name({ name }: { name?: string | JSX.Element }) {
+	if (name) {
+		if (typeof name === "string") {
+			return /<.*>/.test(name) ? (
+				<span dangerouslySetInnerHTML={{ __html: name }} />
+			) : (
+				<span>{name}</span>
+			);
+		}
+		return name;
+	}
+	throw new Error("name not defined");
 }

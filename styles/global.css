@@ -30,11 +30,22 @@
 }
 
 .button {
-	@apply bg-brand-3 hover:bg-brand-4 active:bg-brand-2 my-2 flex w-full items-center justify-center rounded-md py-4 px-8 font-medium ring-1 ring-black/5 transition duration-300 active:scale-95 active:duration-75;
+	@apply bg-brand-3 hover:bg-brand-4 active:bg-brand-2 my-2 flex w-full items-center justify-center rounded-md py-4 px-8 font-bold ring-1 ring-black/5 transition duration-300 active:scale-95 active:duration-75;
 }
 
 .button-primary {
 	@apply bg-brand-2 hover:bg-brand-4 active:bg-brand-1 my-4 py-4  text-xl text-white active:duration-75;
+}
+
+.button-alternative {
+	@apply bg-black hover:bg-brand-4 active:bg-brand-4 my-4 py-4  text-xl text-brand-2 active:duration-75;
+}
+.group > .button:first-child {
+	@apply rounded-r-none mr-0;
+}
+
+.group > .button:last-child {
+	@apply rounded-l-none ml-0;
 }
 
 .footer {
@@ -42,5 +53,5 @@
 }
 
 .icon-link {
-	@apply bg-brand-4 text-brand-2 hover:bg-brand-3 active:bg-brand-2 grid h-12 w-12 place-content-center rounded-full ring-1 ring-black/5;
+	@apply transition duration-300 text-brand-2 hover:bg-brand-1 active:bg-brand-1 grid h-12 w-12 place-content-center rounded-full p-0 text-xl ring-0 bg-transparent hover:text-brand-3;
 }

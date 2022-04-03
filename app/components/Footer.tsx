@@ -1,36 +1,28 @@
-import { Link } from "remix";
-import { IconLinkType } from "~/lib/app.server";
 import {
-	FaTiktok as TikTok,
 	FaFacebookF as Facebook,
 	FaInstagram as Instagram,
+	FaTiktok as TikTok,
+	FaWhatsapp as WhatsApp,
 } from "react-icons/fa";
 import { HiOutlineMail as Email } from "react-icons/hi";
+import { ItemType } from "~/types";
+import { ButtonLink } from "./ButtonLinks";
 
-export default function Footer({ iconLinks }: { iconLinks: IconLinkType[] }) {
+export default function Footer({ footerLinks }: { footerLinks: ItemType[] }) {
 	return (
 		<div className="footer">
-			{iconLinks.map((icon, index) => (
-				<IconLink {...icon} key={index} />
-			))}
+			{footerLinks.map((icon, index) =>
+				// <IconLink icon={icon.icon} url={icon.url} key={index} />
+				icon.icon ? (
+					<ButtonLink
+						{...icon}
+						name={icons[icon.icon]}
+						key={index}
+						className={`icon-link`}
+					/>
+				) : null
+			)}
 		</div>
-	);
-}
-
-export function IconLink({
-	icon,
-	url,
-	className = "",
-	type = "external",
-}: IconLinkType) {
-	return type !== "external" ? (
-		<Link to={url} className={`icon-link ${className}`}>
-			{icons[icon]}
-		</Link>
-	) : (
-		<a href={url} className={`icon-link ${className}`} target="_blank">
-			{icons[icon]}
-		</a>
 	);
 }
 
@@ -39,4 +31,5 @@ let icons = {
 	facebook: <Facebook />,
 	instagram: <Instagram />,
 	email: <Email />,
+	whatsapp: <WhatsApp />,
 };

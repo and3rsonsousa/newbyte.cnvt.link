@@ -1,9 +1,11 @@
-import { BackdropType } from "~/lib/app.server";
+import { BackdropType } from "~/types";
 
-export default function Backdrop({ className, url }: BackdropType) {
+export default function Backdrop({ className, file }: BackdropType) {
+	console.log(file);
+
 	return (
-		<div className={`backdrop ${className}`}>
-			{url && <img src={url.path} className={url.className} />}
+		<div className={`backdrop ${className ? className : ""}`}>
+			{file && <img src={file.path} className={file.className} alt="" />}
 		</div>
 	);
 }
