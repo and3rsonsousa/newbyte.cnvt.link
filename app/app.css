@@ -507,18 +507,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: auto;
 }
 
-.-mr-32 {
-  margin-right: -8rem;
-}
-
-.-mt-56 {
-  margin-top: -14rem;
-}
-
-.-ml-96 {
-  margin-left: -24rem;
-}
-
 .mt-16 {
   margin-top: 4rem;
 }
@@ -557,23 +545,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(0 0 0 / 0.2);
 }
 
-.bg-black {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
-.bg-black\/5 {
-  background-color: rgb(0 0 0 / 0.05);
-}
-
-.bg-black\/95 {
-  background-color: rgb(0 0 0 / 0.95);
-}
-
-.bg-black\/90 {
-  background-color: rgb(0 0 0 / 0.9);
-}
-
 .bg-gradient-to-br {
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
 }
@@ -583,22 +554,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(0 51 136 / 0));
 }
 
-.from-brand-4 {
-  --tw-gradient-from: #00194d;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(0 25 77 / 0));
-}
-
-.from-black {
-  --tw-gradient-from: #000;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(0 0 0 / 0));
-}
-
 .to-brand-4 {
   --tw-gradient-to: #00194d;
-}
-
-.to-black {
-  --tw-gradient-to: #000;
 }
 
 .py-5 {
@@ -615,18 +572,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-brand-3 {
-  --tw-text-opacity: 1;
-  color: rgb(0 51 136 / var(--tw-text-opacity));
-}
-
 .antialiased {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-.opacity-25 {
-  opacity: 0.25;
 }
 
 .opacity-10 {

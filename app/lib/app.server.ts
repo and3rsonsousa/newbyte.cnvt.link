@@ -38,48 +38,58 @@ export function getAppData() {
 		links: [
 			{
 				name: "Chama no Zap",
-				url: "/whatsapp",
+				url: "whatsapp",
 				type: "primary",
+				redirect:
+					"https://api.whatsapp.com/send/?phone=5588988434399&text&app_absent=0",
 			},
 
 			{
 				name: "Encarte BLACK BYTE",
-				url: "/encarte-black-byte.pdf",
+				url: "encarte-black-byte.pdf",
 				type: "alternative",
 				download: true,
 			},
 
 			{
 				name: "Entre no GRUPO DE OFERTAS",
-				url: "/grupo-whatsapp",
+				url: "grupo-whatsapp",
+				redirect: "https://chat.whatsapp.com/BttBYW2J0BRJRXo44jDZLb",
 			},
 			{
 				name: "Onde Estamos ( Mapa )",
-				url: "/onde-estamos",
+				url: "onde-estamos",
+				redirect: "https://goo.gl/maps/6nM3J4nL4zbpJcmr7",
 			},
 			{
 				name: "Fale com a Assistência Técnica ",
-				url: "/whatsapp-assistencia",
+				url: "whatsapp-assistencia",
+				redirect:
+					"https://api.whatsapp.com/send/?phone=5588988749034&text&app_absent=0",
 			},
 
 			{
 				icon: "tiktok",
-				url: "/tiktok",
+				url: "tiktok",
 				footer: true,
+				redirect: "https://tiktok.com/@newbyteoficial",
 			},
 			{
 				icon: "instagram",
-				url: "/instagram",
+				url: "instagram",
 				footer: true,
+				redirect: "https://instagram.com/newbyteoficial",
 			},
 			{
 				icon: "facebook",
-				url: "/facebook",
+				url: "facebook",
 				footer: true,
+				redirect: "https://facebook.com/newbyteoficial",
 			},
 			{
 				icon: "email",
-				url: "mailto:newbyteoficial@gmail.com",
+				url: "email",
+				redirect: "mailto:newbyteoficial@gmail.com",
 				footer: true,
 			},
 		],
