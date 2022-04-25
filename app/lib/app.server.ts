@@ -44,12 +44,12 @@ export function getAppData() {
 					"https://api.whatsapp.com/send/?phone=5588988434399&text&app_absent=0",
 			},
 
-			{
-				name: "Encarte BLACK BYTE",
-				url: "encarte-black-byte.pdf",
-				type: "alternative",
-				download: true,
-			},
+			// {
+			// 	name: "Encarte BLACK BYTE",
+			// 	url: "encarte-black-byte.pdf",
+			// 	type: "alternative",
+			// 	download: true,
+			// },
 
 			{
 				name: "Entre no GRUPO DE OFERTAS",
