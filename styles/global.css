@@ -38,7 +38,7 @@
 }
 
 .button-alternative {
-	@apply bg-black hover:bg-brand-4 active:bg-brand-4 my-4 py-4  text-xl text-brand-2 active:duration-75;
+	@apply bg-red-500 hover:bg-red-700 active:bg-red-700 my-4 py-4  text-xl text-white active:duration-75;
 }
 .group > .button:first-child {
 	@apply rounded-r-none mr-0;
@@ -53,5 +53,5 @@
 }
 
 .icon-link {
-	@apply transition duration-300 text-brand-2 hover:bg-brand-1 active:bg-brand-1 grid h-12 w-12 place-content-center rounded-full p-0 text-xl ring-0 bg-transparent hover:text-brand-3;
+	@apply transition duration-300 text-white hover:bg-brand-1 active:bg-brand-1 grid h-12 w-12 place-content-center rounded-full p-0 text-xl ring-0 bg-transparent hover:text-brand-3;
 }

@@ -1,5 +1,12 @@
 import { AppDataType } from "~/types";
 
+/* 
+
+Cor do backdrop
+#1A46FF
+
+*/
+
 export function getAppData() {
 	let AppDataType: AppDataType = {
 		// name  			=>	nome que ficará no <title></title>
@@ -7,7 +14,7 @@ export function getAppData() {
 		app: {
 			name: "NewByte",
 			className:
-				"font-light text-white antialiased bg-gradient-to-br from-brand-3 to-brand-4 ",
+				"font-light text-white antialiased bg-gradient-to-br from-red-700 to-red-900 ",
 		},
 		container: { className: "" },
 		// Ordem de aparição
@@ -44,12 +51,12 @@ export function getAppData() {
 					"https://api.whatsapp.com/send/?phone=5588988434399&text&app_absent=0",
 			},
 
-			// {
-			// 	name: "Encarte BLACK BYTE",
-			// 	url: "encarte-black-byte.pdf",
-			// 	type: "alternative",
-			// 	download: true,
-			// },
+			{
+				name: "Encarte CONECTADOS",
+				url: "encarte-namorados-2022.pdf",
+				type: "alternative",
+				download: true,
+			},
 
 			{
 				name: "Entre no GRUPO DE OFERTAS",
