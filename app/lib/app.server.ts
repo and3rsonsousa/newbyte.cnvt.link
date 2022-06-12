@@ -14,7 +14,7 @@ export function getAppData() {
 		app: {
 			name: "NewByte",
 			className:
-				"font-light text-white antialiased bg-gradient-to-br from-red-700 to-red-900 ",
+				"font-light text-white antialiased bg-gradient-to-br from-brand-2 to-brand-3 ",
 		},
 		container: { className: "" },
 		// Ordem de aparição
@@ -51,12 +51,12 @@ export function getAppData() {
 					"https://api.whatsapp.com/send/?phone=5588988434399&text&app_absent=0",
 			},
 
-			{
-				name: "Encarte CONECTADOS",
-				url: "encarte-namorados-2022.pdf",
-				type: "alternative",
-				download: true,
-			},
+			// {
+			// 	name: "Encarte CONECTADOS",
+			// 	url: "encarte-namorados-2022.pdf",
+			// 	type: "alternative",
+			// 	download: true,
+			// },
 
 			{
 				name: "Entre no GRUPO DE OFERTAS",

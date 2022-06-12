@@ -554,8 +554,26 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(185 28 28 / 0));
 }
 
+.from-blue-500 {
+  --tw-gradient-from: #3b82f6;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(59 130 246 / 0));
+}
+
+.from-brand-2 {
+  --tw-gradient-from: #1a46ff;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(26 70 255 / 0));
+}
+
 .to-red-900 {
   --tw-gradient-to: #7f1d1d;
+}
+
+.to-brand-4 {
+  --tw-gradient-to: #00194d;
+}
+
+.to-brand-3 {
+  --tw-gradient-to: #003388;
 }
 
 .py-5 {
