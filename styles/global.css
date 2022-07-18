@@ -38,7 +38,7 @@
 }
 
 .button-alternative {
-	@apply bg-red-500 hover:bg-red-700 active:bg-red-700 my-4 py-4  text-xl text-white active:duration-75;
+	@apply bg-white hover:bg-brand-1 active:bg-brand-1 my-4 py-4  text-xl text-brand-2 active:duration-75;
 }
 .group > .button:first-child {
 	@apply rounded-r-none mr-0;

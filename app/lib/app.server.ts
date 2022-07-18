@@ -51,12 +51,12 @@ export function getAppData() {
 					"https://api.whatsapp.com/send/?phone=5588988434399&text&app_absent=0",
 			},
 
-			// {
-			// 	name: "Encarte CONECTADOS",
-			// 	url: "encarte-namorados-2022.pdf",
-			// 	type: "alternative",
-			// 	download: true,
-			// },
+			{
+				name: "Encarte do Dia dos pais",
+				url: "encarte-dia-dos-pais-2022.pdf",
+				type: "alternative",
+				download: true,
+			},
 
 			{
 				name: "Entre no GRUPO DE OFERTAS",
