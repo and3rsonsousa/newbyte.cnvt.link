@@ -64,6 +64,12 @@ export function getAppData() {
 				redirect: "https://chat.whatsapp.com/BttBYW2J0BRJRXo44jDZLb",
 			},
 			{
+				name: "Entre no GRUPO DE OFERTAS - CHRIS",
+				url: "grupo-whatsapp-loja",
+				redirect: "https://chat.whatsapp.com/BttBYW2J0BRJRXo44jDZLb",
+				hidden: true,
+			},
+			{
 				name: "Onde Estamos ( Mapa )",
 				url: "onde-estamos",
 				redirect: "https://goo.gl/maps/6nM3J4nL4zbpJcmr7",

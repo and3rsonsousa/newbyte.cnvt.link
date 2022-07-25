@@ -27,6 +27,7 @@ export type ItemType = {
 	icon?: "tiktok" | "instagram" | "facebook" | "email" | "whatsapp";
 	group?: ItemType[];
 	spaceless?: true;
+	hidden?: true;
 };
 
 export type AppDataType = {

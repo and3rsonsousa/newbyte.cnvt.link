@@ -29,10 +29,12 @@ export default function Index() {
 	let footerLinks: Array<ItemType> = [];
 
 	links.map((link) => {
-		if (link.footer) {
-			footerLinks.push(link);
-		} else {
-			mainLinks.push(link);
+		if (!link.hidden) {
+			if (link.footer) {
+				footerLinks.push(link);
+			} else {
+				mainLinks.push(link);
+			}
 		}
 		return link;
 	});
