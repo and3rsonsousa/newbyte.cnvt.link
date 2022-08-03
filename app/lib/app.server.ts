@@ -54,14 +54,14 @@ export function getAppData() {
 			{
 				name: "Encarte do Dia dos pais",
 				url: "encarte-dia-dos-pais-2022.pdf",
-				type: "alternative",
 				download: true,
 			},
 
 			{
-				name: "Entre no GRUPO DE OFERTAS",
+				name: "GRUPO DE DESCONTOS EXCLUSIVOS",
 				url: "grupo-whatsapp",
 				redirect: "https://chat.whatsapp.com/BttBYW2J0BRJRXo44jDZLb",
+				type: "alternative",
 			},
 			{
 				name: "Entre no GRUPO DE OFERTAS - CHRIS",
