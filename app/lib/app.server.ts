@@ -52,15 +52,15 @@ export function getAppData() {
 			},
 
 			{
-				name: "GRUPO DE DESCONTOS EXCLUSIVOS",
-				url: "grupo-whatsapp",
-				redirect: "https://chat.whatsapp.com/BttBYW2J0BRJRXo44jDZLb",
+				name: "Encarte Produtos Gamers",
+				url: "encarte-level-up-2022.pdf",
+				download: true,
 				type: "alternative",
 			},
 			{
-				name: "Encarte do Dia dos pais",
-				url: "encarte-dia-dos-pais-2022.pdf",
-				download: true,
+				name: "GRUPO DE DESCONTOS EXCLUSIVOS",
+				url: "grupo-whatsapp",
+				redirect: "https://chat.whatsapp.com/BttBYW2J0BRJRXo44jDZLb",
 			},
 
 			{
