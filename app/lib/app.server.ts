@@ -51,12 +51,12 @@ export function getAppData() {
 					"https://api.whatsapp.com/send/?phone=5588988434399&text&app_absent=0",
 			},
 
-			{
-				name: "Encarte Produtos Gamers",
-				url: "encarte-level-up-2022.pdf",
-				download: true,
-				type: "alternative",
-			},
+			// {
+			// 				name: "Encarte Produtos Gamers",
+			// 				url: "encarte-level-up-2022.pdf",
+			// 				download: true,
+			// 				type: "alternative",
+			// 			},
 			{
 				name: "GRUPO DE DESCONTOS EXCLUSIVOS",
 				url: "grupo-whatsapp",
