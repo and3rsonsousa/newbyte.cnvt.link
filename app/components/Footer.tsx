@@ -1,11 +1,12 @@
 import {
-	FaFacebookF as Facebook,
-	FaInstagram as Instagram,
-	FaTiktok as TikTok,
-	FaWhatsapp as WhatsApp,
-} from "react-icons/fa";
-import { HiOutlineMail as Email } from "react-icons/hi";
-import { ItemType } from "~/types";
+	FacebookIcon,
+	InstagramIcon,
+	MailIcon,
+	MessageCircleIcon,
+	Music2Icon,
+} from "lucide-react";
+
+import { type ItemType } from "~/types";
 import { ButtonLink } from "./ButtonLinks";
 
 export default function Footer({ footerLinks }: { footerLinks: ItemType[] }) {
@@ -27,9 +28,9 @@ export default function Footer({ footerLinks }: { footerLinks: ItemType[] }) {
 }
 
 let icons = {
-	tiktok: <TikTok />,
-	facebook: <Facebook />,
-	instagram: <Instagram />,
-	email: <Email />,
-	whatsapp: <WhatsApp />,
+	tiktok: <Music2Icon />,
+	facebook: <FacebookIcon />,
+	instagram: <InstagramIcon />,
+	email: <MailIcon />,
+	whatsapp: <MessageCircleIcon />,
 };
