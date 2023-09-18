@@ -1,4 +1,4 @@
-import { AppDataType } from "~/types";
+import { type AppDataType } from "~/types";
 
 /* 
 

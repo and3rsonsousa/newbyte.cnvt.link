@@ -1,5 +1,5 @@
-import { Link } from "remix";
-import { ItemType } from "~/types";
+import { Link } from "@remix-run/react";
+import { type ItemType } from "~/types";
 
 export default function ButtonLinks({ links }: { links: ItemType[] }) {
 	return (

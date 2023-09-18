@@ -1,6 +1,7 @@
-import { LoaderFunction, MetaFunction, useLoaderData } from "remix";
-import { getAppData } from "~/lib/app.server";
+import { useLoaderData, type MetaFunction } from "@remix-run/react";
+import { type LoaderFunction } from "@remix-run/node";
 
+import { getAppData } from "~/lib/app.server";
 import {
 	App,
 	Backdrop,
@@ -9,16 +10,16 @@ import {
 	Header,
 	ButtonLinks,
 } from "~/components";
-import { AppDataType, ItemType } from "~/types";
-
-export const meta: MetaFunction = ({ data }: { data: AppDataType }) => {
-	return { title: data.app.name || "cnvt.link" };
-};
+import { type AppDataType, type ItemType } from "~/types";
 
 export const loader: LoaderFunction = async () => {
 	let { app, container, backdrop, header, links } = getAppData();
 
 	return { app, container, backdrop, header, links };
+};
+
+export const meta: MetaFunction = () => {
+	return [{ title: "NewByte" }];
 };
 
 export default function Index() {

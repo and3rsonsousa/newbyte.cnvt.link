@@ -1,9 +1,11 @@
-import { MetaFunction } from "remix";
+import { type MetaFunction } from "@remix-run/react";
 
 export const meta: MetaFunction = () => {
-	return {
-		title: "CONVOCADO!",
-	};
+	return [
+		{
+			title: "CONVOCADO!",
+		},
+	];
 };
 
 export default function Convocado() {
