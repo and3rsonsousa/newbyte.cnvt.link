@@ -8,7 +8,7 @@ export function links() {
 			rel: "shortcut icon",
 			href: "/favicon.png",
 		},
-	];
+	]; 
 }
 
 export default function App() {
